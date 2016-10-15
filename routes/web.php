@@ -11,7 +11,7 @@
 |
 */
 
+Auth::routes();
 Route::get('/', 'ContactsController@index');
 Route::resource('contacts', 'ContactsController');
-
-
+Route::get('/home', 'HomeController@index');
