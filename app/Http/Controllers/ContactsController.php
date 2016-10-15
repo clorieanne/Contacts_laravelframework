@@ -1,14 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace contacts\Http\Controllers;
 
-use App\Contacts;
+use contacts\Contacts;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use contacts\Http\Requests;
 
 class ContactsController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
